@@ -86,6 +86,22 @@
  <footer>
     <p>Site criado por <a href="https://gustavoguanabara.github.io/" target="_blank">Gustavo Guanabara</a> para o <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank">CursoemVideo.</a></p>
  </footer>
-    
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const darkModeBtn = document.createElement("button");
+        darkModeBtn.id = "dark-mode-btn";
+        darkModeBtn.textContent = "Ativar Dark Mode";
+        document.body.prepend(darkModeBtn);
+        
+        darkModeBtn.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeBtn.textContent = "Desativar Dark Mode";
+            } else {
+                darkModeBtn.textContent = "Ativar Dark Mode";
+            }
+        });
+    });
+</script>    
 </body>
 </html>

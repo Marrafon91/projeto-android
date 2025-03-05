@@ -1,212 +1,157 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-@font-face {
-    font-family: 'Android';
-    src: url(/fontes/idroid.otf) format('opentype');
-    font-weight: normal;
-}
-
-
-:root {
-    --cor0: #c5ebd6;
-    --cor1: #83e1ad;
-    --cor2: #3ddc84;
-    --cor3: #2fa566;
-    --cor4: #1a5c37;
-    --cor5: #063d1e;
-
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-destaque:"Bebas Neue", serif;
-    --fonte-android: 'Android', serif;
-}
-
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: blanchedalmond;
-    font-family: var(--fonte-padrao);
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
-
-a.externo::after {
-    content: '\00A0\1F517';
-}
-
 
 header {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    min-height: 150px;
     text-align: center;
-    padding-top: 40px;
-}
-header > h1 {
-    color: white;
-    font-family: var(--fonte-destaque);
-    font-size: 3em;
-    font-weight: normal;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.274);
-}
-
-header > p {
-    font-family: var(--fonte-padrao);
-    font-size: 1.2em;
-    color: white;
-    max-width: 600px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 50px;
-    margin: auto;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
+    padding: 2rem;
+    background-color: #0077cc;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav {
-    background-color: var(--cor5);
-    padding: 10px;
-    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.534);
-   
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #005fa3;
+    gap: 1rem;
 }
 
-nav > a {
-    color: var(--cor1);
-    border-radius: 5px;
-    padding: 10px;
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition-duration: 0.5s;
-
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background 0.3s;
 }
 
-nav > a:hover {
-    background-color: var(--cor3);
-    color: var(--cor5);
-
+nav a:hover {
+    background: #003f7f;
 }
 
 main {
-    min-width: 300px;
-    max-width: 1000px;
-    background-color: white;
+    padding: 2rem;
+    max-width: 900px;
     margin: auto;
-    margin-bottom: 30px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.521);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-main h1 {
-    color: var(--cor5);
-    font-family: var(--fonte-android);
-    font-weight: normal;
-    font-size: 1.8em;
-
-}
-main h2 {
-    font-family: var(--fonte-android);
-    color: var(--cor4);
-    font-size: 1.3em;
-    font-weight: normal;
-    background-image: linear-gradient(to right, var(--cor1), transparent);
-    text-indent: 8px;
 }
 
-main p {
-    margin: 15px 0px;
+article h1, h2 {
+    margin-bottom: 1rem;
+    color: #0077cc;
+}
+
+article p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
     text-align: justify;
-    text-indent: 30px;
-    line-height: 2em;
-    font-size: 1em;
-}
-main strong {
-    color: var(--cor4);
-    font-weight: bolder;
- 
 }
 
-main a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--cor5);
-    background-color: var(--cor1);
-    padding: 2px 6px;
-    
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
-main a:hover {
-    text-decoration: underline;
-    color: var(--cor4);
-
-}
-
-main img {
-    width: 100%;
-}
-
-main img.pequena {
-    max-width: 350px;
-    margin: auto;
-    display: block;
-    
-}
-
-div.video {
-    background-color: var(--cor5);
-    margin: 0px -20px 30px -20px;
-    padding: 20px;
-    padding-bottom: 57%;
-    position: relative;
-}
-
-div.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-
+.video {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 aside {
-    background-color: var(--cor1);
-    padding: 10px;
+    padding: 1rem;
+    background-color: #e0e0e0;
+    border-left: 5px solid #0077cc;
+    margin-top: 2rem;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.288);
 }
 
-aside > h3 {
-    background-color: var(--cor4);
-    color: white;
-    padding: 10px;
-    margin: -10px -10px 0px -10px;
-    border-radius: 10px 10px 0px 0px;
-    
+ul {
+    margin-left: 2rem;
+    list-style: square;
 }
 
-aside > ul {
-    list-style-type: '\2714\00A0\00A0';
-    list-style-position: inside;
-    columns: 2;
-}
-
-footer { 
-    background-color: var(--cor5);
-    color: white;
+footer {
     text-align: center;
-    font-size: 0.8em;
-    padding: 5px;
+    padding: 1rem;
+    background-color: #005fa3;
+    color: #fff;
+    margin-top: 2rem;
+}
+footer a {
+    color: #fff;
+    font-weight: bold;
 }
 
-footer > p > a {
-    color: white;
-    font-weight: bolder;
-    text-decoration: none;
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: var(--cor1);
+.dark-mode header, .dark-mode nav, .dark-mode footer {
+    background-color: #1f1f1f;
 }
+
+.dark-mode nav a:hover {
+    background: #444;
+}
+
+.dark-mode aside {
+    background-color: #333;
+    border-left: 5px solid #0077cc;
+}
+
+/* Botão Dark Mode */
+#dark-mode-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.7rem 1.5rem;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#dark-mode-btn:hover {
+    background: #005fa3;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Script para ativar Dark Mode */
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const darkModeBtn = document.createElement("button");
+        darkModeBtn.id = "dark-mode-btn";
+        darkModeBtn.textContent = "Ativar Dark Mode";
+        document.body.prepend(darkModeBtn);
+        
+        darkModeBtn.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeBtn.textContent = "Desativar Dark Mode";
+            } else {
+                darkModeBtn.textContent = "Ativar Dark Mode";
+            }
+        });
+    });
+</script>
